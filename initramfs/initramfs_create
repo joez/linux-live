@@ -100,6 +100,7 @@ done
 copy_including_deps /$LMK/kernel/drivers/staging/zsmalloc # needed by zram
 copy_including_deps /$LMK/kernel/drivers/block/zram
 copy_including_deps /$LMK/kernel/drivers/block/loop.*
+copy_including_deps /$LMK/kernel/drivers/block/virtio_blk.*
 
 # usb drivers
 copy_including_deps /$LMK/kernel/drivers/usb/storage
@@ -120,6 +121,7 @@ copy_including_deps /$LMK/kernel/drivers/scsi/sg.*
 copy_including_deps /$LMK/kernel/drivers/ata
 copy_including_deps /$LMK/kernel/drivers/nvme
 copy_including_deps /$LMK/kernel/drivers/mmc
+copy_including_deps /$LMK/kernel/drivers/virtio
 
 # network support drivers
 if [ "$NETWORK" = "true" ]; then
