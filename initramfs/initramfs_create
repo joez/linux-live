@@ -13,7 +13,7 @@ INITRAMFS=/tmp/$LIVEKITNAME-initramfs-$$
 copy_including_deps()
 {
    # if source doesn't exist or target exists, do nothing
-   if [ ! -e "$1" -o -e "$INITRAMFS"/"$1" ]; then
+   if [ ! -e "$1" ] || [ -f "$1" -a -e "$INITRAMFS"/"$1" ]; then
       return
    fi
 
